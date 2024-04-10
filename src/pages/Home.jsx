@@ -8,7 +8,7 @@ const Home = () => {
    useEffect(() => {
       const fetchReports = async () => {
          try {
-            const response = await fetch('http://localhost:4000/api/reports');
+            const response = await fetch('http://localhost:4000/');
             const json = await response.json();
             if (response.ok) {
                setReports(json);

@@ -15,7 +15,7 @@ const ReportForm = () => {
 
       const report = {victim, reporter, where, description }
 
-      const response = await fetch('http://localhost:4000/api/reports', {
+      const response = await fetch('http://localhost:4000/', {
          method: 'POST',
          body: JSON.stringify(report),
          headers: {
