@@ -15,7 +15,7 @@ const EditReport = () => {
    useEffect(() => {
       const fetchReport = async () => {
          try {
-            const response = await fetch(`https://kaigoreport-api.onrender.com/api/reports/${id}`);
+            const response = await fetch(`https://kaigoreport-api.onrender.com/reports/${id}`);
             const json = await response.json();
             if (response.ok) {
                setReport(json);
@@ -41,7 +41,7 @@ const EditReport = () => {
       const updatedReport = { victim, reporter, where, description };
 
       try {
-         const response = await fetch(`https://kaigoreport-api.onrender.com/api/reports/${id}`, {
+         const response = await fetch(`https://kaigoreport-api.onrender.com/reports/${id}`, {
             method: 'PATCH',
             body: JSON.stringify(updatedReport),
             headers: {
