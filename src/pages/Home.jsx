@@ -8,7 +8,7 @@ const Home = () => {
    useEffect(() => {
       const fetchReports = async () => {
          try {
-            const response = await fetch('http://localhost:4000/','https://kaigoreport-api.onrender.com');
+            const response = await fetch('https://kaigoreport-api.onrender.com');
             const json = await response.json();
             if (response.ok) {
                setReports(json);
