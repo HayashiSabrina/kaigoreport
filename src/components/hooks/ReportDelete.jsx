@@ -10,7 +10,7 @@ const ReportDelete = (reportId) => {
             return; 
          }
          
-         const response = await fetch(`http://localhost:4000/api/reports/${reportId}`, {
+         const response = await fetch(`https://kaigoreport-api.onrender.com/api/reports/${reportId}`, {
             method: 'DELETE'
          });
 
